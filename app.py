@@ -61,7 +61,7 @@ if query := st.chat_input("請輸入您的職安法規問題"):
     # 傳給 GPT
     messages = st.session_state.messages + [{"role": "system", "content": context}]
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=messages,
         temperature=0.3
     )
